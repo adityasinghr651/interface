@@ -18,21 +18,22 @@ This project uses: @vitejs/plugin-react + Tailwind CSS
 Tailwind CSS is properly integrated. Here’s how the setup looks:
 
 ✅ vite.config.js
+```js
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import tailwindcss from '@tailwindcss/vite'
 
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import tailwindcss from '@tailwindcss/vite';
-
+// https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), tailwindcss()],
-});
+  plugins: [react(),tailwindcss()
+],
+})
 
-✅ index.css
-
+```
+ ✅ index.css
+```css
 @import "tailwindcss";
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+```
 
 ✅ App.css
 
@@ -43,22 +44,14 @@ All default styles are commented out to avoid conflicts with Tailwind. You can s
 📦 Getting Started
 
 1. Install dependencies
-
+```bash
 npm install
-
+```
 2. Start the development server
-
+```bash
 npm run dev
+```
 
-3. Build for production
-
-npm run build
-
-4. Preview the production build
-
-npm run preview
-
----
 
 🧹 ESLint
 
@@ -75,7 +68,7 @@ To maintain code quality, ESLint is configured. You can extend it as needed for 
 ---
 
 📁 Folder Structure
-
+```bash
 vite-project/
 ├── public/
 │   └── vite.svg
@@ -91,8 +84,7 @@ vite-project/
 ├── postcss.config.js
 ├── tailwind.config.js
 ├── vite.config.js
-
----
+```
 
 🛠 Technologies
 
