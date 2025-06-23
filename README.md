@@ -16,3 +16,11 @@ Tailwind CSS is integrated using the official approach. Please note:
   import tailwindcss from '@tailwindcss/vite';
   ...
   plugins: [react(), tailwindcss()]
+
+  - ✅ `index.css` includes:
+  ```js
+  @import "tailwindcss";
+  ...
+
+  - App.css is commented out to avoid style conflicts.
+
