@@ -3,11 +3,11 @@ Sure! Here's your complete and properly formatted **all-in-one `README.md` file*
 ---
 
 ````md
-# React + Vite + Tailwind CSS
+React + Vite + Tailwind CSS
 
 This project provides a minimal yet modern setup using **React**, **Vite**, and **Tailwind CSS**. It also includes support for HMR (Hot Module Replacement) and ESLint rules to help you write clean code.
 
-## 🔌 Plugins Used
+ 🔌 Plugins Used
 
 Currently, two official React plugins are available for Vite:
 
@@ -18,11 +18,11 @@ This project uses: **`@vitejs/plugin-react`** + **Tailwind CSS**
 
 ---
 
-## 🎨 Tailwind CSS Setup (Verified from Official Docs)
+ 🎨 Tailwind CSS Setup (Verified from Official Docs)
 
 Tailwind CSS is properly integrated. Here’s how the setup looks:
 
-### ✅ `vite.config.js`
+ ✅ `vite.config.js`
 ```js
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
@@ -33,7 +33,7 @@ export default defineConfig({
 });
 ````
 
-### ✅ `index.css`
+ ✅ `index.css`
 
 ```css
 @import "tailwindcss";
@@ -42,7 +42,7 @@ export default defineConfig({
 @tailwind utilities;
 ```
 
-### ✅ `App.css`
+ ✅ `App.css`
 
 All default styles are commented out to avoid conflicts with Tailwind. You can style everything using Tailwind utility classes.
 
