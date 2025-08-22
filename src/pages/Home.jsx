@@ -2,55 +2,99 @@ export default function Home() {
   return (
     <main className="mx-auto max-w-6xl px-4">
       {/* Hero */}
-      <section className="text-center py-14">
-        <h1 className="text-4xl md:text-5xl font-extrabold">
-          Learn MERN with your <span className="text-blue-600">AI Mentor</span>
+      <section className="text-center py-14 text-white">
+        <h1 className="text-4xl md:text-5xl font-extrabold text-white">
+          Learn with your <span className="text-5xl font-extrabold text-amber-700 drop-shadow-[2px_2px_6px_rgba(150,100,50,0.8)]">
+  AI Mentor
+</span>
+
         </h1>
-        <p className="mt-4 text-gray-600 text-lg">
-          Hinglish ya English—jo comfortable ho—project-based learning ke saath.
+        <p className="mt-4 text-gray-400 text-lg">
+        “Learn in English or Hinglish — with project-based learning.”
         </p>
 
         <div className="mt-8 flex justify-center gap-3">
-          <a
-            href="#courses"
-            className="rounded-xl bg-blue-600 px-5 py-3 font-semibold text-white hover:bg-blue-700"
-          >
-            Start Learning
-          </a>
-          <a
-            href="#features"
-            className="rounded-xl border border-gray-300 px-5 py-3 font-semibold hover:bg-gray-50"
-          >
-            See Features
-          </a>
-        </div>
-      </section>
+  {/* Primary Button - Black background, White text */}
+  <a
+    href="#courses"
+    className="rounded-xl bg-black px-5 py-3 font-semibold text-white border border-gray-700 
+               hover:bg-gray-200 hover:text-black transition-colors duration-300 shadow-md"
+  >
+    Start Learning
+  </a>
 
-      {/* Simple features grid */}
-      <section id="features" className="grid gap-4 md:grid-cols-3 pb-16">
-        <div className="rounded-2xl border p-5 shadow-sm">
-          <h3 className="font-semibold text-lg">Personalized Tutor</h3>
-          <p className="mt-2 text-gray-600 text-sm">
-            Tumhare pace par explain, examples, assignments—sab personalized.
-          </p>
-        </div>
-        <div className="rounded-2xl border p-5 shadow-sm">
-          <h3 className="font-semibold text-lg">Practice & Projects</h3>
-          <p className="mt-2 text-gray-600 text-sm">
-            Coding practice + mini projects (To-Do, Blog, E-commerce cart).
-          </p>
-        </div>
-        <div className="rounded-2xl border p-5 shadow-sm">
-          <h3 className="font-semibold text-lg">Progress Tracking</h3>
-          <p className="mt-2 text-gray-600 text-sm">
-            Jahan chhoda tha wahan se continue—progress auto save.
-          </p>
-        </div>
-      </section>
+  {/* Secondary Button - White background, Black text */}
+  <a
+    href="#features"
+    className="rounded-xl bg-black px-5 py-3 font-semibold text-white border border-gray-700 
+               hover:bg-gray-100 hover:text-black transition-colors duration-300 shadow-md"
+  >
+    See Features
+  </a>
+
+  <a
+    href="#features"
+    className="rounded-xl bg-black px-5 py-3 font-semibold text-white border border-gray-700 
+               hover:bg-gray-100 hover:text-black transition-colors duration-300 shadow-md"
+  >
+    Student Registration
+  </a>
+</div>
+
+
+
+
+</section>
+
+{/* 🚀 Futuristic Features Grid */}
+<section
+  id="features"
+  className="grid gap-6 md:grid-cols-3 pb-16 text-gray-200"
+>
+  {/* Card 1 */}
+  <div
+    className="group rounded-2xl border border-gray-700 p-6 shadow-lg bg-gradient-to-br from-gray-900 to-gray-800 
+               hover:from-gray-800 hover:to-gray-900 transition-all duration-500 hover:shadow-[0_0_20px_rgba(0,200,255,0.6)]"
+  >
+    <h3 className="font-semibold text-lg text-white group-hover:text-cyan-300 transition-colors duration-300">
+      Your AI Tutor
+    </h3>
+    <p className="mt-3 text-gray-400 text-sm group-hover:text-gray-200">
+      Personalized mentorship that explains concepts, provides examples, and guides you step by step.
+    </p>
+  </div>
+
+  {/* Card 2 */}
+  <div
+    className="group rounded-2xl border border-gray-700 p-6 shadow-lg bg-gradient-to-br from-gray-900 to-gray-800 
+               hover:from-gray-800 hover:to-gray-900 transition-all duration-500 hover:shadow-[0_0_20px_rgba(0,255,150,0.6)]"
+  >
+    <h3 className="font-semibold text-lg text-white group-hover:text-green-300 transition-colors duration-300">
+      Practice + Projects
+    </h3>
+    <p className="mt-3 text-gray-400 text-sm group-hover:text-gray-200">
+      Hands-on coding with real-world mini projects to make you industry-ready.
+    </p>
+  </div>
+
+  {/* Card 3 */}
+  <div
+    className="group rounded-2xl border border-gray-700 p-6 shadow-lg bg-gradient-to-br from-gray-900 to-gray-800 
+               hover:from-gray-800 hover:to-gray-900 transition-all duration-500 hover:shadow-[0_0_20px_rgba(255,180,0,0.6)]"
+  >
+    <h3 className="font-semibold text-lg text-white group-hover:text-yellow-300 transition-colors duration-300">
+      Smart Progress Tracking
+    </h3>
+    <p className="mt-3 text-gray-400 text-sm group-hover:text-gray-200">
+      Resume exactly where you left off with auto-tracked learning progress.
+    </p>
+  </div>
+</section>
+
 
       {/* Placeholder course anchor for buttons */}
       <div id="courses" className="pb-20 text-center text-sm text-gray-500">
-        (Course selection yahan aayega — next steps me banayenge)
+        (Course selection will be added here — to be built in the next steps.)
       </div>
     </main>
   );
