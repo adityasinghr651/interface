@@ -10,7 +10,7 @@ export default function Login() {
       {/* Login Card */}
       <div className="relative z-10 bg-gray-900/80 p-8 rounded-2xl shadow-2xl w-96 border border-gray-700 backdrop-blur-md">
         <h2 className="text-3xl font-extrabold text-white mb-6 text-center drop-shadow-lg tracking-wide">
-          AI Robotics Login
+          Login For AI Tutor
         </h2>
 
         <form className="space-y-4">
