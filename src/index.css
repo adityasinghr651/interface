@@ -9,3 +9,40 @@ body {
   color: #e0e0e0;
   background: linear-gradient(to bottom, #1a1a1a, #0a0a0a);
 }
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: auto; /* Ensure overlay is interactive for closing */
+}
+
+.modal-content {
+  background-color: #1a1a1a; /* Dark background for content */
+  padding: 2rem;
+  border-radius: 0.5rem;
+  z-index: 60;
+  position: relative; /* Needed for absolute positioning of close button if added */
+}
+
+.blurred-background {
+  filter: blur(5px);
+  transition: filter 0.3s ease-in-out; /* Optional: Add a smooth transition */
+}
+
+/* Assuming the navbar has a class like 'navbar' or you're targeting the nav element */
+/* Add a z-index to the navbar to ensure it's below the modals but above other content */
+nav { /* Or use .navbar if you have a specific class */
+  z-index: 40;
+  position: relative; /* Ensure z-index is applied correctly */
+}
+
+/* Adjust the main content z-index if necessary to be below the navbar */
+/* For example, a container holding the rest of your page content */

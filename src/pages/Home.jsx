@@ -1,4 +1,6 @@
-export default function Home() {
+import { Link } from "react-router-dom";
+
+export default function Home({ onSeeFeaturesClick }) {
   return (
     <main className="mx-auto max-w-6xl px-4">
       {/* Hero */}
@@ -32,13 +34,14 @@ export default function Home() {
     See Features
   </a>
 
-  <a
-    href="#features"
-    className="rounded-xl bg-black px-5 py-3 font-semibold text-white border border-gray-700 
-               hover:bg-gray-100 hover:text-black transition-colors duration-300 shadow-md"
-  >
-    Student Registration
-  </a>
+  <Link
+  to="/register"
+  className="rounded-xl bg-black px-5 py-3 font-semibold text-white border border-gray-700 
+             hover:bg-gray-100 hover:text-black transition-colors duration-300 shadow-md"
+>
+  Student Registration
+</Link>
+
 </div>
 
 
@@ -65,30 +68,38 @@ export default function Home() {
   </div>
 
   {/* Card 2 */}
-  <div
-    className="group rounded-2xl border border-gray-700 p-6 shadow-lg bg-gradient-to-br from-gray-900 to-gray-800 
-               hover:from-gray-800 hover:to-gray-900 transition-all duration-500 hover:shadow-[0_0_20px_rgba(0,255,150,0.6)]"
-  >
-    <h3 className="font-semibold text-lg text-white group-hover:text-green-300 transition-colors duration-300">
-      Practice + Projects
-    </h3>
-    <p className="mt-3 text-gray-400 text-sm group-hover:text-gray-200">
-      Hands-on coding with real-world mini projects to make you industry-ready.
-    </p>
-  </div>
+  <Link
+  to="/projects"
+  className="group rounded-2xl border border-gray-700 p-6 shadow-lg 
+             bg-gradient-to-br from-gray-900 to-gray-800 
+             hover:from-gray-800 hover:to-gray-900 
+             transition-all duration-500 
+             hover:shadow-[0_0_20px_rgba(0,255,150,0.6)] block"
+>
+  <h3 className="font-semibold text-lg text-white group-hover:text-green-300 transition-colors duration-300">
+    Practice + Projects
+  </h3>
+  <p className="mt-3 text-gray-400 text-sm group-hover:text-gray-200">
+    Hands-on coding with real-world mini projects to make you industry-ready.
+  </p>
+</Link>
 
   {/* Card 3 */}
-  <div
-    className="group rounded-2xl border border-gray-700 p-6 shadow-lg bg-gradient-to-br from-gray-900 to-gray-800 
-               hover:from-gray-800 hover:to-gray-900 transition-all duration-500 hover:shadow-[0_0_20px_rgba(255,180,0,0.6)]"
+  <Link
+    to="/progress" // Added Link with to prop
+    className="group rounded-2xl border border-gray-700 p-6 shadow-lg bg-gradient-to-br from-gray-900 to-gray-800
+               hover:from-gray-800 hover:to-gray-900 transition-all duration-500 hover:shadow-[0_0_20px_rgba(255,180,0,0.6)] block" // Moved className here
   >
-    <h3 className="font-semibold text-lg text-white group-hover:text-yellow-300 transition-colors duration-300">
-      Smart Progress Tracking
-    </h3>
-    <p className="mt-3 text-gray-400 text-sm group-hover:text-gray-200">
-      Resume exactly where you left off with auto-tracked learning progress.
-    </p>
-  </div>
+    {/* The original div content is now inside the Link */}
+    <div> {/* Keep this inner div if you need it for layout/styling within the Link */}
+      <h3 className="font-semibold text-lg text-white group-hover:text-yellow-300 transition-colors duration-300">
+        Smart Progress Tracking
+      </h3>
+      <p className="mt-3 text-gray-400 text-sm group-hover:text-gray-200">
+        Resume exactly where you left off with auto-tracked learning progress.
+      </p>
+    </div>
+  </Link> 
 </section>
 
 

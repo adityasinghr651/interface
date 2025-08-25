@@ -1,16 +1,19 @@
-export default function Login() {
+export default function Login({ onClose }) {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-black via-gray-900 to-gray-800 relative overflow-hidden">
-      {/* Futuristic glowing background */}
-      <div className="absolute inset-0">
-        <div className="absolute -top-40 -left-40 w-80 h-80 bg-white/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute top-20 right-20 w-96 h-96 bg-teal-500/10 rounded-full blur-3xl animate-pulse"></div>
-      </div>
-
+    <div className="fixed inset-0 flex items-center justify-center bg-black/50 backdrop-blur-sm z-50">
       {/* Login Card */}
-      <div className="relative z-10 bg-gray-900/80 p-8 rounded-2xl shadow-2xl w-96 border border-gray-700 backdrop-blur-md">
+      <div className="relative bg-gray-900/90 p-8 rounded-2xl shadow-2xl w-96 border border-gray-700">
+        
+        {/* Close Button */}
+        <button
+          onClick={onClose}
+          className="absolute top-3 right-3 text-gray-400 hover:text-white text-xl"
+        >
+          &times;
+        </button>
+
         <h2 className="text-3xl font-extrabold text-white mb-6 text-center drop-shadow-lg tracking-wide">
-          AI Robotics Login
+          Login For AI Tutor
         </h2>
 
         <form className="space-y-4">
